@@ -1,30 +1,121 @@
-Pytanie
+Pytanie 1
 odpowiedz A
 odpowiedz B
 odpowiedz C
 odpowiedz D
-1
-Pytanie
+A
+Pytanie 2
 odpowiedz A
 odpowiedz B
 odpowiedz C
 odpowiedz D
-1
-Pytanie
+B
+Pytanie 3
 odpowiedz A
 odpowiedz B
 odpowiedz C
 odpowiedz D
-1
-Pytanie
+C
+Pytanie 4
 odpowiedz A
 odpowiedz B
 odpowiedz C
 odpowiedz D
-1
-Pytanie
+A
+Pytanie 5
 odpowiedz A
 odpowiedz B
 odpowiedz C
 odpowiedz D
-1
+D
+Pytanie 6
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 7
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 8
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 9
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 10
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 11
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 12
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 13
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 14
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 15
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 16
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 17
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 18
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 19
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+Pytanie 20
+odpowiedz A
+odpowiedz B
+odpowiedz C
+odpowiedz D
+D
+
