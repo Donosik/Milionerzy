@@ -57,6 +57,7 @@ bool GameDataInput(const std::string &gameDataFile, std::vector<Question> &quest
             {
                 std::cout << "W pliku z pytaniami niepoprawnie okresloną odpowiedz do pytania nr " << ((i - 5) / 6) + 1
                           << std::endl;
+                file.close();
                 return false;
             }
             question.correctAnswer = x;
@@ -69,6 +70,7 @@ bool GameDataInput(const std::string &gameDataFile, std::vector<Question> &quest
         }
         i++;
     }
+    file.close();
     return true;
 }
 
@@ -105,6 +107,7 @@ bool PlayerDataInput(const std::string &playerDataFile, std::string &playerName)
             break;
         }
     }
+    file.close();
     return true;
 }
 
@@ -116,7 +119,7 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
         //TODO: dodać ewentualnie rezygnowanie z gry na danej kwocie
         std::cout << "Informacja do gry." << std::endl;
         std::cout << "Po wybraniu znaku P, zostanie wyswietlone okno wyboru kol ratunkowych." << std::endl;
-        std::cout<<std::endl;
+        std::cout << std::endl;
         int x = Random(0, questions.size() - 1);
         std::cout << "Twoje " << i + 1 << " pytanie brzmi: " << std::endl;
         std::cout << questions[x].question << std::endl;
@@ -130,7 +133,7 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
         std::cin >> odpowiedz;
         if (toupper(odpowiedz) == 'P')
         {
-            Help(playerName,questions[x],lifelines);
+            Help(playerName, questions[x], lifelines);
         }
         else if (toupper(odpowiedz) == questions[x].correctAnswer)
         {
@@ -162,12 +165,25 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
 
 void Help(std::string playerName, Question question, Lifelines lifelines)
 {
-    if(!lifelines.AskAudience&&!lifelines.fiftyFifty&&!lifelines.phoneToFriend)
+    if (!lifelines.AskAudience && !lifelines.fiftyFifty && !lifelines.phoneToFriend)
     {
-        std::cout<<"Niestety nie masz juz zadnych kol ratunkowych!"<<std::endl;
-        std::cout<<"Musisz odpowiedziec na pytanie bez pomocy!"<<std::endl;
+        std::cout << "Niestety nie masz juz zadnych kol ratunkowych!" << std::endl;
+        std::cout << "Musisz odpowiedziec na pytanie bez pomocy!" << std::endl;
     }
-    std::cout<<"Ktorego kola ratunkowego chcialbys uzyc?"<<std::endl;
+    std::cout << "Masz nadal dostepne te kola:" << std::endl;
+
+    if (lifelines.phoneToFriend)
+    {
+        std::cout << "- Telefon do przyjaciela" << std::endl;
+    }
+    if (lifelines.AskAudience)
+    {
+        std::cout << "- Pytanie do publicznosci" << std::endl;
+    }
+    if (lifelines.fiftyFifty)
+    {
+        std::cout << "- Pol na pol" << std::endl;
+    }
 }
 
 int Random(int min, int max)

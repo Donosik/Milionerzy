@@ -11,11 +11,12 @@ struct Question
     char correctAnswer; /// Numer poprawnej odpowiedzi
 };
 
+/// Struktura opisująca czy dane koło ratunkowe jest do wykorzystania
 struct Lifelines
 {
-    bool AskAudience = true;
-    bool fiftyFifty = true;
-    bool phoneToFriend = true;
+    bool AskAudience = true; /// Koło ratunkowe - pomoc publiczności
+    bool fiftyFifty = true; /// Koło ratunkowe - Pół na pół
+    bool phoneToFriend = true; /// Koło ratunkowe - Telefon do przyjaciela
 };
 
 #endif STRUCTURES_H
