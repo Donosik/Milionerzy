@@ -39,6 +39,8 @@ bool PlayerDataInput(const std::string &playerDataFile, std::string &playerName)
 /// @param lifelines Struktura, która pokazuje ile kół pomocniczych zostało jeszcze graczowi
 void MainGame(std::string playerName, std::vector<Question> questions, Lifelines lifelines);
 
+void Help(std::string playerName, Question question, Lifelines lifelines);
+
 /// Funckja zwracająca losowa wartość z zakresu od min do max
 /// @param min Wartość minimalna jaka może zostać wylosowana
 /// @param max Wartość maksymalna jaka może zostać wylosowana

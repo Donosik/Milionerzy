@@ -113,6 +113,7 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
     int maxRounds = 2;
     for (int i = 0; i < maxRounds; i++)
     {
+        //TODO: dodać ewentualnie rezygnowanie z gry na danej kwocie
         std::cout << "Informacja do gry." << std::endl;
         std::cout << "Po wybraniu znaku P, zostanie wyswietlone okno wyboru kol ratunkowych." << std::endl;
         std::cout<<std::endl;
@@ -129,7 +130,7 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
         std::cin >> odpowiedz;
         if (toupper(odpowiedz) == 'P')
         {
-            std::cout << "Okienko Pomocy" << std::endl;
+            Help(playerName,questions[x],lifelines);
         }
         else if (toupper(odpowiedz) == questions[x].correctAnswer)
         {
@@ -157,6 +158,16 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
         questions.erase(questions.begin() + x);
         std::cout << std::endl;
     }
+}
+
+void Help(std::string playerName, Question question, Lifelines lifelines)
+{
+    if(!lifelines.AskAudience&&!lifelines.fiftyFifty&&!lifelines.phoneToFriend)
+    {
+        std::cout<<"Niestety nie masz juz zadnych kol ratunkowych!"<<std::endl;
+        std::cout<<"Musisz odpowiedziec na pytanie bez pomocy!"<<std::endl;
+    }
+    std::cout<<"Ktorego kola ratunkowego chcialbys uzyc?"<<std::endl;
 }
 
 int Random(int min, int max)
