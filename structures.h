@@ -6,17 +6,23 @@
 /// Struktura opisująca jedno pyutanie z pliku
 struct Question
 {
-    std::string question; /// Pytanie
-    std::string answers[4]; /// -Tablica z 4 odpowiedziami do pytania
-    char correctAnswer; /// Numer poprawnej odpowiedzi
+    /// Pytanie
+    std::string question;
+    /// -Tablica z 4 odpowiedziami do pytania
+    std::string answers[4];
+    /// Numer poprawnej odpowiedzi
+    char correctAnswer;
 };
 
 /// Struktura opisująca czy dane koło ratunkowe jest do wykorzystania
 struct Lifelines
 {
-    bool AskAudience = true; /// Koło ratunkowe - pomoc publiczności
-    bool fiftyFifty = true; /// Koło ratunkowe - Pół na pół
-    bool phoneToFriend = true; /// Koło ratunkowe - Telefon do przyjaciela
+    /// Koło ratunkowe - pomoc publiczności
+    bool AskAudience = true;
+    /// Koło ratunkowe - Pół na pół
+    bool fiftyFifty = true;
+    /// Koło ratunkowe - Telefon do przyjaciela
+    bool phoneToFriend = true;
 };
 
 #endif STRUCTURES_H
