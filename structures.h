@@ -3,7 +3,7 @@
 
 #include <string>
 
-/// Struktura opisująca jedno pyutanie z pliku
+/// Struktura opisująca jedno pytanie z pliku
 struct Question
 {
     /// Pytanie

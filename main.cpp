@@ -4,11 +4,16 @@
 
 int main(int argc, char *argv[])
 {
-    std::string playerDataFile; /// Ścieżka do pliku z graczami
-    std::string gameDataFile; /// Ścieżka do pliku z pytaniami
-    std::string playerName; /// Zmienna zawierająca nazwę gracza
-    std::vector<Question> questions; /// Vector zawierający wszystkie pytania z pliku
-    Lifelines lifelines; /// Koła ratunkowe gracza
+    /// Ścieżka do pliku z graczami
+    std::string playerDataFile;
+    /// Ścieżka do pliku z pytaniami
+    std::string gameDataFile;
+    /// Zmienna zawierająca nazwę gracza
+    std::string playerName;
+    /// Vector zawierający wszystkie pytania z pliku
+    std::vector<Question> questions;
+    /// Koła ratunkowe gracza
+    Lifelines lifelines;
 
     // Sprawdza czy argumenty zostały podane poprawnie, jeśli nie to kończy program
     if (!Arguments(argc, argv, playerDataFile, gameDataFile))
