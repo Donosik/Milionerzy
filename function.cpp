@@ -165,6 +165,7 @@ void MainGame(std::string playerName, std::vector<Question> questions, Lifelines
 
 void Help(std::string playerName, Question question, Lifelines lifelines)
 {
+    //TODO: do skończenia koła ratunkowe
     if (!lifelines.AskAudience && !lifelines.fiftyFifty && !lifelines.phoneToFriend)
     {
         std::cout << "Niestety nie masz juz zadnych kol ratunkowych!" << std::endl;
