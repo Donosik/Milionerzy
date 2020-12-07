@@ -1,5 +1,5 @@
-Piotr
-Damian
-Julia
-Paulina
-Robert
+Damian 13
+Piotr 9
+Robert 8
+Krzysztof 0
+damian 1

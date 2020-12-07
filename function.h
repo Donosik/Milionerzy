@@ -7,7 +7,8 @@
 #include <sstream>
 #include <chrono>
 #include <random>
-#include "structures.h"
+#include "Question.h"
+#include "Lifelines.h"
 
 /// Funkcja, która przyjmuje parametry programu i wstawia do struktury FilesPath ścieżki do odpowiednich plików
 /// @param argc Ilość argumentów, które przyjmuje program
@@ -37,13 +38,26 @@ bool PlayerDataInput(const std::string &playerDataFile, std::string &playerName)
 /// @param playerName Nazwa gracza uczestniczącego w grze
 /// @param questions Wektor wszystkich pytań wraz z odpowiedziami
 /// @param lifelines Struktura, która pokazuje ile kół pomocniczych zostało jeszcze graczowi
-void MainGame(std::string playerName, std::vector<Question> questions, Lifelines lifelines);
+int MainGame(std::string playerName, std::vector<Question> questions, Lifelines lifelines);
 
 /// Funckja odpowiada za zarządzanie kołami ratunkowymi
 /// @@param playerName Nazwa gracza
 /// @param question Pytanie, do którego jest użyte koło ratunkowe
 /// @param lifelines Jakie koła ratunkowe są jeszcze dostępne dla gracza
-void Help(std::string playerName, Question question, Lifelines lifelines);
+char Help(std::string playerName, Question question, Lifelines &lifelines, int whichQuestion);
+
+/// Funkcja pokazująca pytanie i możliwe odpowiedzi
+/// @param question Pytanie, które ma być wyświetlone
+/// @param whichQuestion numer wyświetlanego pytania
+/// @return Odpowiedź na zadane pytanie
+char ShowQuestion(Question question, int whichQuestion);
+
+/// Funkcja zapisuje wynik gracza, jesli juz gral sprawdza czy to był lepszy wynik
+/// @param filePath Ścieżka do pliku do zapisu
+/// @param playerName Nazwa gracza grającego
+/// @param playerScore Wynik gracza grajacego
+/// @return Funkcja zwraca false, w przypadku, gdy nie moze otworzyc pliku
+bool SaveToFile(std::string filePath, std::string playerName, int playerScore);
 
 /// Funckja zwracająca losowa wartość z zakresu od min do max
 /// @param min Wartość minimalna jaka może zostać wylosowana

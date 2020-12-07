@@ -1,6 +1,6 @@
 #include <vector>
 #include "function.h"
-#include "structures.h"
+#include "Question.h"
 
 int main(int argc, char *argv[])
 {
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     {
         return 0;
     }
-    //
+    // Sprawdza czy można otworzyć plik z pytaniami, jeśli tak to wszystkie wczytuje do zmiennje questions
     if (!GameDataInput(gameDataFile, questions))
     {
         return 0;
@@ -30,6 +30,14 @@ int main(int argc, char *argv[])
     {
         return 0;
     }
-    MainGame(playerName,questions,lifelines);
+
+    int score = 0;
+    // Funkcja odpowiada za główną rozgrywkę, zwraca wynik
+    score = MainGame(playerName, questions, lifelines);
+
+    if (SaveToFile(playerDataFile, playerName, score))
+    {
+        return 0;
+    }
     return 0;
 }
